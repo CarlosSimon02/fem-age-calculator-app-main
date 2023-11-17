@@ -1,0 +1,214 @@
+:root {
+    --clr-accent: hsl(259, 100%, 65%);
+    --clr-error: hsl(0, 100%, 67%);
+    --clr-primary-1: hsl(0, 0%, 100%);
+    --clr-primary-2: hsl(0, 0%, 94%);
+    --clr-hr: hsl(0, 0%, 86%);
+    --clr-secondary-1: hsl(0, 0%, 8%);
+    --clr-secondary-2: hsl(0, 1%, 44%);
+
+    --ff-primary: "Poppins", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+}
+
+/* resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* utilities */
+body {
+    background-color: var(--clr-primary-2);
+    font-family: var(--ff-primary);
+}
+
+main {
+    margin-inline: clamp(1rem, 4.071vw + 0.046rem, 2rem);
+}
+
+label {
+    text-transform: uppercase;
+    font-size: clamp(0.75rem, 0.509vw + 0.631rem, 0.875rem);
+    letter-spacing: .25em;
+    font-weight: var(--fw-bold);
+    color: var(--clr-secondary-2);
+}
+
+input[type="number"] {
+    font-size: clamp(1.25rem, 3.053vw + 0.534rem, 2rem);
+    letter-spacing: .01em;
+    height: clamp(3.375rem, 4.58vw + 2.302rem, 4.5rem);
+    padding-inline: clamp(0.875rem, 2.545vw + 0.279rem, 1.5rem);
+    outline: none;
+    border: .0625rem solid var(--clr-hr);
+    border-radius: .5rem;
+}
+
+input[type="number"]:focus {
+    border-color: var(--clr-accent);
+}
+
+input[type="number"]::placeholder {
+    color: var(--clr-secondary-1);
+    opacity: .40;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1 {
+    font-size: clamp(3.5rem, 12.214vw + 0.637rem, 6.5rem);
+    font-weight: var(--fw-extra-bold);
+    font-style: italic;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+}
+
+/* end utilities */
+
+
+/* form */
+.form {
+    overflow: hidden;
+    width: 100%;
+    max-width: 840px;
+    background-color: var(--clr-primary-1);
+    margin-top: clamp(5.5rem, 6.197vw + 4.048rem, 9.625rem);
+    margin-bottom: clamp(8.625rem, -9.39vw + 17.076rem, 14.875rem);
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 8.142vw + -0.408rem, 3.5rem);
+    padding-block: clamp(3rem, 2.036vw + 2.523rem, 3.5rem);
+    border-radius: 1.5rem;
+    border-bottom-right-radius: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form__date {
+    display: flex;
+    gap: 1rem;
+}
+
+.form__date__item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form__date__item input {
+    width: 100%;
+}
+
+.form__calculate {
+    position: relative;
+}
+
+.form__calculate hr {
+    position: absolute;    
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: .0625rem solid var(--clr-hr);
+}
+
+.form__calculate__button {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background-color: var(--clr-accent);
+    border: none;
+    aspect-ratio: 1 / 1;
+    width: clamp(4rem, 8.142vw + 2.092rem, 6rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-inline: auto;
+    padding: 0;
+    transition: background-color .5s ease;
+}
+
+.form__calculate__button:hover {
+    background-color: var(--clr-secondary-1);
+}
+
+.form__calculate__button:active {
+    background-color: var(--clr-secondary-2);
+}
+
+.form__calculate__button svg {
+    width: clamp(1.5rem, 5.089vw + 0.307rem, 2.75rem);
+    height: clamp(1.5rem, 5.089vw + 0.307rem, 2.75rem);
+}
+
+.form__result span {
+    color: var(--clr-accent);
+    margin-right: .5625rem;
+}
+
+@media (min-width: 56.5rem) {
+    .form {
+        gap: 0;
+    }
+    
+    .form__date__item {
+        justify-content: start;
+    }
+
+    .form__date__item input {
+        width: 10rem;
+    }
+
+    .form__calculate__button {
+        margin-right: 0;
+    }
+}
