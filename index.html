@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Age calculator app</title>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -33,12 +34,12 @@
         <fieldset class="form__date__item">
           <label for="year">Year</label>
           <input type="number" name="date" id="year" inputmode="numeric"
-            placeholder="YYYY" oninput="this.value = this.value.replace(/\D+/g, '')" required>
+            placeholder="YYYY" oninput="this.value = this.value.replace(/\D+/g, '')">
           <p>Error</p>
         </fieldset>
       </div>
       <div class="form__calculate">
-        <button class="form__calculate__button" aria-label="Calculate" onclick="return getData()">
+        <button class="form__calculate__button" aria-label="Calculate">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 44" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
         </button>
         <hr>
