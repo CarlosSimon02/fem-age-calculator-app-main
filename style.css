@@ -112,6 +112,12 @@ h1 {
     line-height: 1.1;
 }
 
+input+p {
+    font-style: italic;
+    color: var(--clr-error);
+    display: none;
+}
+
 /* end utilities */
 
 
@@ -142,19 +148,19 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: clamp(0.25rem, 1.018vw + 0.011rem, 0.5rem);
+    border: none;
+}
+
+.form__date__item:invalid label,
+.form__date__item:invalid input,
+.form__date__item:invalid p {
+    color: var(--clr-error);
+    border-color: var(--clr-error);
+    display: block;
 }
 
 .form__date__item input {
     width: 100%;
-}
-
-.form__date__item input {
-    border-color: var(--clr-error);
-}
-
-input+p {
-    font-style: italic;
-    color: var(--clr-error);
 }
 
 .form__calculate {

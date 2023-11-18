@@ -18,24 +18,24 @@
   <main>
     <article class="form" action="">
       <div class="form__date">
-        <div class="form__date__item">
+        <fieldset class="form__date__item">
           <label for="day">Day</label>
           <input type="number" name="date" id="day" inputmode="numeric"
             placeholder="DD" oninput="this.value = this.value.replace(/\D+/g, '')">
           <p>Error</p>
-        </div>
-        <div class="form__date__item">
+        </fieldset>
+        <fieldset class="form__date__item">
           <label for="month">Month</label>
           <input type="number" name="date" id="month" inputmode="numeric"
             placeholder="MM" oninput="this.value = this.value.replace(/\D+/g, '')">
           <p>Error</p>
-        </div>
-        <div class="form__date__item">
+        </fieldset>
+        <fieldset class="form__date__item">
           <label for="year">Year</label>
           <input type="number" name="date" id="year" inputmode="numeric"
-            placeholder="YYYY" oninput="this.value = this.value.replace(/\D+/g, '')">
+            placeholder="YYYY" oninput="this.value = this.value.replace(/\D+/g, '')" required>
           <p>Error</p>
-        </div>
+        </fieldset>
       </div>
       <div class="form__calculate">
         <button class="form__calculate__button" aria-label="Calculate" onclick="return getData()">
