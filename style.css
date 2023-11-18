@@ -101,7 +101,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 h1 {
@@ -127,7 +127,7 @@ h1 {
     padding-inline: clamp(1.5rem, 8.142vw + -0.408rem, 3.5rem);
     padding-block: clamp(3rem, 2.036vw + 2.523rem, 3.5rem);
     border-radius: 1.5rem;
-    border-bottom-right-radius: 6.25rem;
+    border-bottom-right-radius: clamp(6.25rem, 25.445vw + 0.286rem, 12.5rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
