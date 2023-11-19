@@ -152,11 +152,13 @@ input+p {
 }
 
 .form__date__item:invalid label,
-.form__date__item:invalid input,
 .form__date__item:invalid p {
     color: var(--clr-error);
-    border-color: var(--clr-error);
     display: block;
+}
+
+.form__date__item:invalid input {
+    border-color: var(--clr-error);
 }
 
 .form__date__item input {
@@ -193,7 +195,7 @@ input+p {
 }
 
 .form__calculate__button:hover {
-    background-color: var(--clr-secondary-1);
+    scale: .8;
 }
 
 .form__calculate__button:active {
@@ -205,7 +207,7 @@ input+p {
     height: clamp(1.5rem, 5.089vw + 0.307rem, 2.75rem);
 }
 
-.form__result span {
+.form__result .span {
     color: var(--clr-accent);
     margin-right: .5625rem;
 }

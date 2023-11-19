@@ -17,39 +17,41 @@
 
 <body>
   <main>
-    <article class="form" action="">
+    <form class="form" id="form" action="">
       <div class="form__date">
         <fieldset class="form__date__item">
           <label for="day">Day</label>
           <input type="number" name="date" id="day" inputmode="numeric"
-            placeholder="DD" oninput="this.value = this.value.replace(/\D+/g, '')">
-          <p>Error</p>
+            placeholder="DD" oninput=""
+            min="1" max="31">
+          <p id="dayError">Must be a valid day</p>
         </fieldset>
         <fieldset class="form__date__item">
           <label for="month">Month</label>
           <input type="number" name="date" id="month" inputmode="numeric"
-            placeholder="MM" oninput="this.value = this.value.replace(/\D+/g, '')">
-          <p>Error</p>
+            placeholder="MM" oninput="this.value = this.value.replace(/\D+/g, '')" 
+            min="1" max="12">
+          <p id="monthError">Must be a valid month</p>
         </fieldset>
         <fieldset class="form__date__item">
           <label for="year">Year</label>
           <input type="number" name="date" id="year" inputmode="numeric"
-            placeholder="YYYY" oninput="this.value = this.value.replace(/\D+/g, '')">
-          <p>Error</p>
+            placeholder="YYYY" max="">
+          <p id="yearError">Must be in the past</p>
         </fieldset>
       </div>
       <div class="form__calculate">
-        <button class="form__calculate__button" aria-label="Calculate">
+        <button id="calculateBtn" class="form__calculate__button" aria-label="Calculate">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 44" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
         </button>
         <hr>
       </div>
       <div class="form__result">
-        <h1><span>- -</span>years</h1>
-        <h1><span>- -</span>months</h1>
-        <h1><span>- -</span>days</h1>
+        <h1><span class="span" id="yearResult">- -</span><span id="yearH">years</span></h1>
+        <h1><span class="span" id="monthResult">- -</span><span id="monthH">months</span></h1>
+        <h1><span class="span" id="dayResult">- -</span><span id="dayH">days</span></h1>
       </div>
-    </article>
+    </form>
   </main>
 </body>
 
