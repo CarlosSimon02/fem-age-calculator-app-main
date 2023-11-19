@@ -70,6 +70,7 @@ form.onsubmit = function(e) {
     // check if date is in the past
     let givenDate = new Date(year.value+"-"+month.value+"-"+day.value);
     let currentDate = new Date();
+    givenDate.setHours(0,0,0,0);
     currentDate.setHours(0,0,0,0);
     let diff = currentDate - givenDate;
     if (diff > 0) {
@@ -99,10 +100,10 @@ function animateResult(result, span, heading, unit) {
     const interval = setInterval(() => {
         span.innerHTML = Math.floor(Math.random() * Math.pow(10,result.toString().length)).toString();
         iterations++;
-        if(iterations >= 20) {
+        if(iterations >= 15) {
             clearInterval(interval)
             span.innerHTML = result.toString();
             heading.innerHTML = result === 1 ? unit : unit + "s";
         }
-    }, 30);
+    }, 20);
 }

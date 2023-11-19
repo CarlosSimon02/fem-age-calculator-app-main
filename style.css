@@ -141,7 +141,7 @@ input+p {
 
 .form__date {
     display: flex;
-    gap: 1rem;
+    gap: clamp(1rem, 4.071vw + 0.046rem, 2rem);
 }
 
 .form__date__item {
@@ -149,6 +149,7 @@ input+p {
     flex-direction: column;
     gap: clamp(0.25rem, 1.018vw + 0.011rem, 0.5rem);
     border: none;
+    padding: 0;
 }
 
 .form__date__item:invalid label,
@@ -191,15 +192,16 @@ input+p {
     border-radius: 100%;
     margin-inline: auto;
     padding: 0;
-    transition: background-color .5s ease;
+    transition: background-color .5s ease,
+                scale .5s ease;
 }
 
 .form__calculate__button:hover {
-    scale: .8;
+    background-color: var(--clr-secondary-1);
 }
 
 .form__calculate__button:active {
-    background-color: var(--clr-secondary-2);
+    scale: .8;
 }
 
 .form__calculate__button svg {
